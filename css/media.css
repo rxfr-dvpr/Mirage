@@ -1,0 +1,45 @@
+@media (max-width: 1440px){}
+@media (max-width: 1320px){}
+@media (max-width: 1290px){}
+@media (max-width: 1170px){}
+@media (max-width: 1140px){}
+@media (max-width: 1024px){}
+@media (max-width: 992px){}
+@media (max-width: 850px){}
+@media (max-width: 768px){}
+@media (max-width: 736px){
+
+    .header__title {
+        font-size: calc(34px + (30 + 30 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .services__title {
+        font-size: calc(32px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .design__title {
+        font-size: calc(32px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .teamwork__title {
+        font-size: calc(32px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .testimonials__title {
+        font-size: calc(32px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    }
+
+    .subscribe__title {
+        font-size: calc(32px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    }
+}
+@media (max-width: 734px){}
+@media (max-width: 684px){}
+@media (max-width: 667px){}
+@media (max-width: 576px){}
+@media (max-width: 480px){}
+@media (max-width: 414px){}
+@media (max-width: 412px){}
+@media (max-width: 375px){}
+@media (max-width: 360px){}
+@media (max-width: 320px){}

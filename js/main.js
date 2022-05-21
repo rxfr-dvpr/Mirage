@@ -176,6 +176,8 @@ let emailSubmitBox = document.querySelector('.email-submit-box'),
 
 window.addEventListener('scroll', () => {
     if (window.scrollY >= (subscribeSection.offsetTop - subscribeSection.offsetHeight) / 1.1) {
+        emailSubmitBox.style.transform = 'translateX(0)'
+    } else {
         emailSubmitBox.style.transform = 'translateX(-200%)'
     }
 })

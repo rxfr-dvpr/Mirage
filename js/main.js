@@ -63,6 +63,8 @@ let servicesCardBox = document.querySelector('.services__card-box')
 window.addEventListener('scroll', function serviceRunAnim() {
     if (window.scrollY >= (servicesCardBox.offsetTop - servicesCardBox.offsetHeight) / 3) {
         servicesCardBox.style.transform = `translateX(0)`
+    } else {
+        servicesCardBox.style.transform = `translateX(150%)`
     }
 })
 
@@ -154,6 +156,12 @@ window.addEventListener('scroll', () => {
         nationalImg.style.transform = "translate(0, 0)"
         deloitteImg.style.transform = "translate(0, 0)"
         googleImg.style.transform = "translate(0, 0)"
+    } else {
+        ferrarImg.style.transform = "translate(-250%, 250%)"
+        microsoftImg.style.transform = "translate(-300%, -500%)"
+        nationalImg.style.transform = "translateY(450%)"
+        deloitteImg.style.transform = "translate(350%, -520%)"
+        googleImg.style.transform = "translate(280%, 280%)"
     }
 })
 
@@ -168,7 +176,7 @@ let emailSubmitBox = document.querySelector('.email-submit-box'),
 
 window.addEventListener('scroll', () => {
     if (window.scrollY >= (subscribeSection.offsetTop - subscribeSection.offsetHeight) / 1.1) {
-        emailSubmitBox.style.transform = 'translateX(0)'
+        emailSubmitBox.style.transform = 'translateX(-200%)'
     }
 })
 

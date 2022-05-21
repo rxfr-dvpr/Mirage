@@ -15,19 +15,15 @@ logo.addEventListener('click', function () {
 let allAnimImg = [...document.querySelectorAll('.all__img')]
 
 window.addEventListener('mousemove', function moveImg(e) {
-    for (let i = 0; i < allAnimImg.length; i++) {
-        let speed = allAnimImg[i].getAttribute('data-speed')
-        
-        const X = (window.innerWidth - e.pageX * speed) / 100;
-        const Y = (window.innerWidth - e.pageY * speed) / 100;
-        
-        allAnimImg[i].style.transform = `translate(${X}px, ${Y}px)`
-
-        
-        if (window.innerWidth < 1440) {
-            window.removeEventListener('mousemove', moveImg)
-            allAnimImg[i].style.transform = 'translate(0, 0)'
-        }
+    if (window.innerWidth >= 1440) {
+        for (let i = 0; i < allAnimImg.length; i++) {
+            let speed = allAnimImg[i].getAttribute('data-speed')
+            
+            const X = (window.innerWidth - e.pageX * speed) / 100;
+            const Y = (window.innerWidth - e.pageY * speed) / 100;
+            
+            allAnimImg[i].style.transform = `translate(${X}px, ${Y}px)`  
+        }   
     }
 })
 
@@ -84,6 +80,9 @@ window.addEventListener('scroll', function () {
     if (window.scrollY >= (designSectionRow.offsetTop - designSectionRow.offsetHeight) / 1.3) {
         designImgBox.style.transform = 'translateX(0)'
         designDesc.style.transform = 'translateX(0)'
+    } else {
+        designImgBox.style.transform = 'translateX(-150%)'
+        designDesc.style.transform = 'translateX(150%)'
     }
 })
 
@@ -102,6 +101,9 @@ window.addEventListener('scroll', function () {
     if (window.scrollY >= (teamworkSection.offsetTop - teamworkSection.offsetHeight) * 1.5) {
         teamworkImgBox.style.transform = 'translate(0, 0)'
         teamworkDesc.style.transform = 'translate(0, 0)'
+    } else {
+        teamworkImgBox.style.transform = 'translate(150%, 90%)'
+        teamworkDesc.style.transform = 'translate(-150%, 90%)'
     }
 })
 
@@ -122,6 +124,10 @@ window.addEventListener('scroll', () => {
         testiImgBox.style.transform = "rotate(0) translateY(0)"
         testiCarousel.style.transform = "rotate(0) translateY(0)"
         testiCarouselBtns.style.opacity = 1
+    } else {
+        testiImgBox.style.transform = "rotate(-90deg) translateY(-180%)"
+        testiCarousel.style.transform = "rotate(90deg) translateY(-180%)"
+        testiCarouselBtns.style.opacity = 0
     }
 })
 

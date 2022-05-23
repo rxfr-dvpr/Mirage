@@ -121,7 +121,7 @@ window.addEventListener('scroll', function () {
         designImgBox.style.transform = 'translateX(-150%)'
         designImgBox.style.opacity = 0
         designDesc.style.transform = 'translateX(150%)'
-        designDesc.style.transform = 0
+        designDesc.style.opacity = 0
     }
 })
 

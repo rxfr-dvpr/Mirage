@@ -377,6 +377,7 @@ header::after {
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
+    opacity: 0;
 }
 
 .services__card {
@@ -506,6 +507,7 @@ header::after {
     -moz-transition: 1.4s;
     -ms-transition: 1.4s;
     -o-transition: 1.4s;
+    opacity: 0;
 }
 
 .design-img {
@@ -528,6 +530,7 @@ header::after {
     -moz-transition: 1.4s;
     -ms-transition: 1.4s;
     -o-transition: 1.4s;
+    opacity: 0;
 }
 
 .design__title {
@@ -592,6 +595,7 @@ header::after {
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
+    opacity: 0;
 }
 
 .teamwork__title {
@@ -615,6 +619,7 @@ header::after {
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
+    opacity: 0;
 }
 
 .teamwork-img {
@@ -650,6 +655,7 @@ header::after {
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
+    opacity: 0;
 }
 
 .testimonials-img {
@@ -672,6 +678,7 @@ header::after {
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
+    opacity: 0;
 }
 
 .testimonials__desc {
@@ -778,6 +785,7 @@ header::after {
 
 .partners__img {
     min-width: 135px;
+    opacity: 0;
 }
 
 .ferrari-img {

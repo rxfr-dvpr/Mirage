@@ -94,8 +94,10 @@ let servicesCardBox = document.querySelector('.services__card-box')
 window.addEventListener('scroll', function serviceRunAnim() {
     if (window.scrollY >= (servicesCardBox.offsetTop - servicesCardBox.offsetHeight) / 3) {
         servicesCardBox.style.transform = `translateX(0)`
+        servicesCardBox.style.opacity = 1
     } else {
         servicesCardBox.style.transform = `translateX(150%)`
+        servicesCardBox.style.opacity = 0
     }
 })
 
@@ -112,10 +114,14 @@ let designSectionRow = document.querySelector('.design__section .row'),
 window.addEventListener('scroll', function () {
     if (window.scrollY >= (designSectionRow.offsetTop - designSectionRow.offsetHeight) / 1.3) {
         designImgBox.style.transform = 'translateX(0)'
+        designImgBox.style.opacity = 1
         designDesc.style.transform = 'translateX(0)'
+        designDesc.style.opacity = 1
     } else {
         designImgBox.style.transform = 'translateX(-150%)'
+        designImgBox.style.opacity = 0
         designDesc.style.transform = 'translateX(150%)'
+        designDesc.style.transform = 0
     }
 })
 
@@ -133,10 +139,14 @@ let teamworkSection = document.querySelector('.teamwork__section'),
 window.addEventListener('scroll', function () {
     if (window.scrollY >= (teamworkSection.offsetTop - teamworkSection.offsetHeight) * 1.3) {
         teamworkImgBox.style.transform = 'translate(0, 0)'
+        teamworkImgBox.style.opacity = 1
         teamworkDesc.style.transform = 'translate(0, 0)'
+        teamworkDesc.style.opacity = 1
     } else {
         teamworkImgBox.style.transform = 'translate(150%, 90%)'
+        teamworkImgBox.style.opacity = 0
         teamworkDesc.style.transform = 'translate(-150%, 90%)'
+        teamworkDesc.style.opacity = 0
     }
 })
 
@@ -155,11 +165,15 @@ let testiSection = document.querySelector('.testimonials__section'),
 window.addEventListener('scroll', () => {
     if (window.scrollY >= (testiSection.offsetTop - testiSection.offsetHeight)) {
         testiImgBox.style.transform = "rotate(0) translateY(0)"
+        testiImgBox.style.opacity = 1
         testiCarousel.style.transform = "rotate(0) translateY(0)"
+        testiCarousel.style.opacity = 1
         testiCarouselBtns.style.opacity = 1
     } else {
         testiImgBox.style.transform = "rotate(-90deg) translateY(-180%)"
+        testiImgBox.style.opacity = 0
         testiCarousel.style.transform = "rotate(90deg) translateY(-180%)"
+        testiCarousel.style.opacity = 0
         testiCarouselBtns.style.opacity = 0
     }
 })
@@ -176,7 +190,8 @@ let ferrarImg = document.querySelector('.ferrari-img'),
     nationalImg = document.querySelector('.national-img'),
     deloitteImg = document.querySelector('.deloitte-img'),
     googleImg = document.querySelector('.google-img'),
-    partnerSection = document.querySelector('.partners__section')
+    partnerSection = document.querySelector('.partners__section'),
+    partnersImg = document.querySelector('.partners__img')
     
 
 window.addEventListener('scroll', () => {
@@ -187,12 +202,18 @@ window.addEventListener('scroll', () => {
             nationalImg.style.transform = "translate(0, 0)"
             deloitteImg.style.transform = "translate(0, 0)"
             googleImg.style.transform = "translate(0, 0)"
+            partnersImg.forEach(elements => {
+                elements.style.opacity = 1
+            });
         } else {
             ferrarImg.style.transform = "translate(-250%, 250%)"
             microsoftImg.style.transform = "translate(-300%, -500%)"
             nationalImg.style.transform = "translateY(450%)"
             deloitteImg.style.transform = "translate(350%, -520%)"
             googleImg.style.transform = "translate(280%, 280%)"
+            partnersImg.forEach(elements => {
+                elements.style.opacity = 0
+            });
         }
     }
 })
@@ -209,8 +230,10 @@ let emailSubmitBox = document.querySelector('.email-submit-box'),
 window.addEventListener('scroll', () => {
     if (window.scrollY >= (subscribeSection.offsetTop - subscribeSection.offsetHeight) / 1.1) {
         emailSubmitBox.style.transform = 'translateX(0)'
+        emailSubmitBox.style.opacity = 1
     } else {
         emailSubmitBox.style.transform = 'translateX(-200%)'
+        emailSubmitBox.style.opacity = 0
     }
 })
 

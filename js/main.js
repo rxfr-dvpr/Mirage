@@ -202,18 +202,23 @@ window.addEventListener('scroll', () => {
             nationalImg.style.transform = "translate(0, 0)"
             deloitteImg.style.transform = "translate(0, 0)"
             googleImg.style.transform = "translate(0, 0)"
-            partnersImg.forEach(elements => {
-                elements.style.opacity = 1
-            });
+            ferrarImg.style.opacity = 1
+            microsoftImg.style.opacity = 1
+            nationalImg.style.opacity = 1
+            deloitteImg.style.opacity = 1
+            googleImg.style.opacity = 1
+            
         } else {
             ferrarImg.style.transform = "translate(-250%, 250%)"
             microsoftImg.style.transform = "translate(-300%, -500%)"
             nationalImg.style.transform = "translateY(450%)"
             deloitteImg.style.transform = "translate(350%, -520%)"
             googleImg.style.transform = "translate(280%, 280%)"
-            partnersImg.forEach(elements => {
-                elements.style.opacity = 0
-            });
+            ferrarImg.style.opacity = 0
+            microsoftImg.style.opacity = 0
+            nationalImg.style.opacity = 0
+            deloitteImg.style.opacity = 0
+            googleImg.style.opacity = 0
         }
     }
 })

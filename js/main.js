@@ -220,6 +220,12 @@ window.addEventListener('scroll', () => {
             deloitteImg.style.opacity = 0
             googleImg.style.opacity = 0
         }
+    } else {
+        ferrarImg.style.opacity = 1
+        microsoftImg.style.opacity = 1
+        nationalImg.style.opacity = 1
+        deloitteImg.style.opacity = 1
+        googleImg.style.opacity = 1
     }
 })
 

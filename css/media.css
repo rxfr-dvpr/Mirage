@@ -1,13 +1,150 @@
 @media (max-width: 1440px){}
 @media (max-width: 1320px){}
 @media (max-width: 1290px){}
-@media (max-width: 1170px){}
-@media (max-width: 1140px){}
-@media (max-width: 1024px){}
-@media (max-width: 992px){}
+@media (max-width: 1170px){
+    .design__section .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 1140px){
+
+    .cursor-run {
+        display: none;
+    }
+
+    .header__content-box .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 50px;
+    }
+    
+    .header__desc {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header__title {
+        height: 100px;
+    }    
+
+    .services__card-box {
+        display: flex;
+        justify-content: center;
+        column-gap: 15px;
+        row-gap: 30px;
+    }
+    
+    
+    .design__section .row {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    
+    .design__desc {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .teamwork__section .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 30px;
+    }
+
+    .teamwork__desc {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+@media (max-width: 1024px){
+
+    .partners__img {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+
+    .footer__main-section .row {
+        column-gap: 10px;
+    }
+}
+@media (max-width: 992px){
+
+    .header__list {
+        width: max-content;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -120%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 50px;
+        padding: 15px;
+        z-index: 99;
+        background: var(--second-color);
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+        transition: .4s;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -ms-transition: .4s;
+        -o-transition: .4s;
+        -webkit-transition: .7s;
+    }
+
+    .header__nav-hamburger {
+        display: flex;
+    }
+
+    .header__link {
+        color: var(--primary-color);
+    }
+
+    .testimonials__section .row {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    .testimonials__desc {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonials__author-bio {
+        align-items: center;
+    }
+
+    .subscribe__section::before {
+        display: none;
+    }
+
+    .partners__img-box {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+}
 @media (max-width: 850px){}
 @media (max-width: 768px){}
 @media (max-width: 736px){
+
+    .row {
+        flex-wrap: wrap;
+    }
 
     .header__title {
         font-size: calc(34px + (30 + 30 * 0.7) * ((100vw - 320px) / 1920));
@@ -32,12 +169,41 @@
     .subscribe__title {
         font-size: calc(32px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
     }
+
+    .footer__main-section .row {
+        flex-direction: column;
+        align-items: center; 
+        row-gap: 30px;
+    } 
+    
+    .footer__desc {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__list {
+        align-items: center;
+        text-align: center;
+        row-gap: 5px;
+    }
 }
 @media (max-width: 734px){}
 @media (max-width: 684px){}
 @media (max-width: 667px){}
 @media (max-width: 576px){}
-@media (max-width: 480px){}
+@media (max-width: 480px){
+    .footer__links-box {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .footer__copyright-section .row {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+}
 @media (max-width: 414px){}
 @media (max-width: 412px){}
 @media (max-width: 375px){}

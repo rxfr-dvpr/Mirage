@@ -22,6 +22,26 @@
     -o-border-radius: 8px;
 }
 
+.cursor-run {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    background: var(--second-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
 ::selection {
     color: var(--primary-color);
     background-color: var(--second-color);
@@ -52,7 +72,6 @@ ul {
 .row {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
 }
 
 /* header start */
@@ -88,6 +107,7 @@ header::after {
 .header__nav .row {
     justify-content: space-between;
     padding: 58px 0 130px;
+    overflow: hidden;
 }
 
 .logo {
@@ -95,6 +115,7 @@ header::after {
     font-size: 30px;
     font-weight: 700;
     color: var(--main-color);
+    user-select: none;
 }
 
 .logo span {
@@ -107,6 +128,7 @@ header::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 5;
 }
 
 .header__link {
@@ -152,7 +174,47 @@ header::after {
     width: 100%;
 }
 
+.header__nav-hamburger {
+    width: 30px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+    cursor: pointer;
+    user-select: none;
+}
 
+.ham-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--second-color);
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.header__nav-hamburger.active .line-top {
+    transform: translateY(9px) rotate(-45deg);
+    -webkit-transform: translateY(9px) rotate(-45deg);
+    -moz-transform: translateY(9px) rotate(-45deg);
+    -ms-transform: translateY(9px) rotate(-45deg);
+    -o-transform: translateY(9px) rotate(-45deg);
+}
+
+.header__nav-hamburger.active .line-middle {
+    background: transparent;    
+}
+
+.header__nav-hamburger.active .line-bottom {
+    transform: translateY(-9px) rotate(45deg);
+    -webkit-transform: translateY(-9px) rotate(45deg);
+    -moz-transform: translateY(-9px) rotate(45deg);
+    -ms-transform: translateY(-9px) rotate(45deg);
+    -o-transform: translateY(-9px) rotate(45deg);
+}
 
 .header__content-box .row {
     justify-content: space-between;
@@ -843,6 +905,21 @@ header::after {
     filter: drop-shadow(20px 20px 40px rgba(205, 205, 205, 0.25));
     -webkit-filter: drop-shadow(20px 20px 40px rgba(205, 205, 205, 0.25));
     padding: 14px 13px;
+    transition: 1.2s;
+    transform: translateX(-200%);
+    -webkit-transform: translateX(-200%);
+    -moz-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    -o-transform: translateX(-200%);
+    -webkit-transition: 1.2s;
+    -moz-transition: 1.2s;
+    -ms-transition: 1.2s;
+    -o-transition: 1.2s;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .mail-icon {
@@ -868,19 +945,6 @@ header::after {
 
 .email-input:focus {
     outline-color: var(--second-color);
-}
-
-.email-submit-box {
-    transition: 1.2s;
-    transform: translateX(-200%);
-    -webkit-transform: translateX(-200%);
-    -moz-transform: translateX(-200%);
-    -ms-transform: translateX(-200%);
-    -o-transform: translateX(-200%);
-    -webkit-transition: 1.2s;
-    -moz-transition: 1.2s;
-    -ms-transition: 1.2s;
-    -o-transition: 1.2s;
 }
 
 /* subscribe section end */

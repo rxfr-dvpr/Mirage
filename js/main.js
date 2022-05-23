@@ -9,21 +9,52 @@ logo.addEventListener('click', function () {
 // logo reload end
 
 
+// cursor run start
+
+let cursorRun = document.querySelector('.cursor-run')
+
+window.addEventListener('mousemove', function (e) {
+    if (window.innerWidth > 1140) {
+        const X = e.pageX
+        const Y = e.pageY
+        cursorRun.style.setProperty('--x', X + "px")
+        cursorRun.style.setProperty('--y', Y + "px")
+    }
+})
+
+// cursor run end
+
+// header hamburger start
+
+let headerList = document.querySelector('.header__list')
+let headerNavHamburger = document.querySelector('.header__nav-hamburger')
+
+headerNavHamburger.addEventListener('click', function () {
+    headerNavHamburger.classList.toggle('active')
+    if (headerNavHamburger.classList.contains('active')) {
+        headerList.style.left = 0
+    } else {
+        headerList.style.left = '-120%' 
+    }
+})
+
+// header hamburger end
+
 
 // all img animation start
 
 let allAnimImg = [...document.querySelectorAll('.all__img')]
 
 window.addEventListener('mousemove', function moveImg(e) {
-    if (window.innerWidth >= 1440) {
+    if (window.innerWidth > 1440) {
         for (let i = 0; i < allAnimImg.length; i++) {
             let speed = allAnimImg[i].getAttribute('data-speed')
             
             const X = (window.innerWidth - e.pageX * speed) / 100;
             const Y = (window.innerWidth - e.pageY * speed) / 100;
             
-            allAnimImg[i].style.transform = `translate(${X}px, ${Y}px)`  
-        }   
+            allAnimImg[i].style.transform = `translate(${X}px, ${Y}px)`
+        }
     }
 })
 
@@ -100,7 +131,7 @@ let teamworkSection = document.querySelector('.teamwork__section'),
 
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY >= (teamworkSection.offsetTop - teamworkSection.offsetHeight) * 1.5) {
+    if (window.scrollY >= (teamworkSection.offsetTop - teamworkSection.offsetHeight) * 1.3) {
         teamworkImgBox.style.transform = 'translate(0, 0)'
         teamworkDesc.style.transform = 'translate(0, 0)'
     } else {
@@ -148,20 +179,21 @@ let ferrarImg = document.querySelector('.ferrari-img'),
     partnerSection = document.querySelector('.partners__section')
     
 
-
 window.addEventListener('scroll', () => {
-    if (window.scrollY >= (partnerSection.offsetTop - partnerSection.offsetHeight) / 1.1) {
-        ferrarImg.style.transform = "translate(0, 0)"
-        microsoftImg.style.transform = "translate(0, 0)"
-        nationalImg.style.transform = "translate(0, 0)"
-        deloitteImg.style.transform = "translate(0, 0)"
-        googleImg.style.transform = "translate(0, 0)"
-    } else {
-        ferrarImg.style.transform = "translate(-250%, 250%)"
-        microsoftImg.style.transform = "translate(-300%, -500%)"
-        nationalImg.style.transform = "translateY(450%)"
-        deloitteImg.style.transform = "translate(350%, -520%)"
-        googleImg.style.transform = "translate(280%, 280%)"
+    if (window.innerWidth > 1024) {
+        if (window.scrollY >= (partnerSection.offsetTop - partnerSection.offsetHeight) / 1.1) {
+            ferrarImg.style.transform = "translate(0, 0)"
+            microsoftImg.style.transform = "translate(0, 0)"
+            nationalImg.style.transform = "translate(0, 0)"
+            deloitteImg.style.transform = "translate(0, 0)"
+            googleImg.style.transform = "translate(0, 0)"
+        } else {
+            ferrarImg.style.transform = "translate(-250%, 250%)"
+            microsoftImg.style.transform = "translate(-300%, -500%)"
+            nationalImg.style.transform = "translateY(450%)"
+            deloitteImg.style.transform = "translate(350%, -520%)"
+            googleImg.style.transform = "translate(280%, 280%)"
+        }
     }
 })
 

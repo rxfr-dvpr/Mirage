@@ -22,6 +22,15 @@ window.addEventListener('mousemove', function (e) {
     }
 })
 
+window.addEventListener('scroll', function (e) {
+    if (window.innerWidth > 1140) {
+        const X = e.pageX
+        const Y = e.pageY
+        cursorRun.style.setProperty('--x', X + "px")
+        cursorRun.style.setProperty('--y', Y + "px")
+    }
+})
+
 // cursor run end
 
 // header hamburger start
@@ -247,23 +256,5 @@ window.addEventListener('scroll', () => {
         emailSubmitBox.style.opacity = 0
     }
 })
-
-    // let subscribeTitle = document.querySelector('.subscribe__title')
-
-    // let txt2 = subscribeTitle.innerHTML
-    // subscribeTitle.innerHTML = ''
-
-    // function runStringAnim2(x = 0) {
-    //     subscribeTitle.innerHTML += txt2[x]
-    //     x++
-
-    //     if (x < txt2.length) {
-    //         setTimeout(() => {
-    //             runStringAnim2(x)
-    //         }, 80);
-    //     }
-    // }
-
-    // runStringAnim2()
 
 // subscribe section animation end

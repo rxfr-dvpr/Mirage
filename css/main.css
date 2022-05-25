@@ -8,6 +8,10 @@
     --primary-color: #fff;
 }
 
+body {
+    cursor: none;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     background: #FFF1F9;

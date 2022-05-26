@@ -15,19 +15,19 @@ let cursorRun = document.querySelector('.cursor-run')
 
 window.addEventListener('mousemove', function (e) {
     if (window.innerWidth > 1140) {
-        const X = e.pageX
-        const Y = e.pageY
-        cursorRun.style.setProperty('--x', X + "px")
-        cursorRun.style.setProperty('--y', Y + "px")
+        const X1 = e.pageX
+        const Y1 = e.pageY
+        cursorRun.style.setProperty('--x', X1 + "px")
+        cursorRun.style.setProperty('--y', Y1 + "px")
     }
 })
 
-window.addEventListener('scroll', function (e) {
+window.addEventListener('scroll', function (z) {
     if (window.innerWidth > 1140) {
-        const X = e.pageX
-        const Y = e.pageY
-        cursorRun.style.setProperty('--x', X + "px")
-        cursorRun.style.setProperty('--y', Y + "px")
+        const X2 = z.pageX
+        const Y2 = z.pageY
+        cursorRun.style.setProperty('--x', X2 + "px")
+        cursorRun.style.setProperty('--y', Y2 + "px")
     }
 })
 

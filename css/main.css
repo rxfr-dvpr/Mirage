@@ -8,11 +8,6 @@
     --primary-color: #fff;
 }
 
-body {
-    cursor: none;
-    overflow-x: hidden;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
     background: #FFF1F9;
@@ -25,26 +20,6 @@ body {
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-}
-
-.cursor-run {
-    width: 20px;
-    height: 20px;
-    display: block;
-    position: absolute;
-    top: var(--y);
-    left: var(--x);
-    background: var(--second-color);
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
 }
 
 ::selection {

@@ -9,30 +9,6 @@ logo.addEventListener('click', function () {
 // logo reload end
 
 
-// cursor run start
-
-let cursorRun = document.querySelector('.cursor-run')
-
-window.addEventListener('mousemove', function (e) {
-    if (window.innerWidth > 1140) {
-        const X1 = e.pageX
-        const Y1 = e.pageY
-        cursorRun.style.setProperty('--x', X1 + "px")
-        cursorRun.style.setProperty('--y', Y1 + "px")
-    }
-})
-
-window.addEventListener('scroll', function (z) {
-    if (window.innerWidth > 1140) {
-        const X2 = z.pageX
-        const Y2 = z.pageY
-        cursorRun.style.setProperty('--x', X2 + "px")
-        cursorRun.style.setProperty('--y', Y2 + "px")
-    }
-})
-
-// cursor run end
-
 // header hamburger start
 
 let headerList = document.querySelector('.header__list')

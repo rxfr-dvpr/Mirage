@@ -10,10 +10,6 @@
 }
 @media (max-width: 1140px){
 
-    .cursor-run {
-        display: none;
-    }
-
     .header__content-box .row {
         flex-direction: column;
         align-items: center;

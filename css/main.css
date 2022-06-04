@@ -360,6 +360,15 @@ header::after {
     opacity: 0;
 }
 
+.services__card-box.active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    opacity: 1;
+}
+
 .services__card {
     max-width: 270px;
     width: 100%;
@@ -490,6 +499,15 @@ header::after {
     opacity: 0;
 }
 
+.design__img-box.active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    opacity: 1;
+}
+
 .design-img {
     width: 100%;
 }
@@ -511,6 +529,15 @@ header::after {
     -ms-transition: 1.4s;
     -o-transition: 1.4s;
     opacity: 0;
+}
+
+.design__desc.active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    opacity: 1;
 }
 
 .design__title {
@@ -578,6 +605,15 @@ header::after {
     opacity: 0;
 }
 
+.teamwork__desc.active {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    opacity: 1;
+}
+
 .teamwork__title {
     font-size: calc(32px + 20 * (100vw / 1920));
 }
@@ -600,6 +636,15 @@ header::after {
     -ms-transition: 1s;
     -o-transition: 1s;
     opacity: 0;
+}
+
+.teamwork__img-box.active {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    opacity: 1;
 }
 
 .teamwork-img {
@@ -638,6 +683,15 @@ header::after {
     opacity: 0;
 }
 
+.testimonials__img-box.active {
+    transform: rotate(0) translateY(0);
+    -webkit-transform: rotate(0) translateY(0);
+    -moz-transform: rotate(0) translateY(0);
+    -ms-transform: rotate(0) translateY(0);
+    -o-transform: rotate(0) translateY(0);
+    opacity: 1;
+}
+
 .testimonials-img {
     width: 100%;
     filter: drop-shadow(20px 20px 40px rgba(250, 141, 184, 0.15));
@@ -659,6 +713,15 @@ header::after {
     -ms-transition: 1s;
     -o-transition: 1s;
     opacity: 0;
+}
+
+.testimonials__carousel.active {
+    transform: rotate(0) translateY(0);
+    -webkit-transform: rotate(0) translateY(0);
+    -moz-transform: rotate(0) translateY(0);
+    -ms-transform: rotate(0) translateY(0);
+    -o-transform: rotate(0) translateY(0);
+    opacity: 1;
 }
 
 .testimonials__desc {
@@ -708,6 +771,10 @@ header::after {
     -moz-transition: 5s;
     -ms-transition: 5s;
     -o-transition: 5s;
+}
+
+.testimonials__carousel-btns.active {
+    opacity: 1;
 }
 
 .testimonials__carousel-btn {
@@ -781,6 +848,15 @@ header::after {
     opacity: 0;
 }
 
+.ferrari-img.active {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    opacity: 1;
+}
+
 .microsoft-img {
     transform: translate(-300%, -500%);
     -webkit-transform: translate(-300%, -500%);
@@ -793,6 +869,15 @@ header::after {
     -ms-transition: 1.3s;
     -o-transition: 1.3s;
     opacity: 0;
+}
+
+.microsoft-img.active {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    opacity: 1;
 }
 
 .national-img {
@@ -809,6 +894,15 @@ header::after {
     opacity: 0;
 }
 
+.national-img.active {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    opacity: 1;
+}
+
 .deloitte-img {
     transform: translate(350%, -520%);
     -webkit-transform: translate(350%, -520%);
@@ -823,6 +917,15 @@ header::after {
     opacity: 0;
 }
 
+.deloitte-img.active {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    opacity: 1;
+}
+
 .google-img {
     transform: translate(280%, 280%);
     -webkit-transform: translate(280%, 280%);
@@ -835,6 +938,15 @@ header::after {
     -ms-transition: 1s;
     -o-transition: 1s;
     opacity: 0;
+}
+
+.google-img.active {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    opacity: 1;
 }
 
 
@@ -912,6 +1024,16 @@ header::after {
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    opacity: 0;
+}
+
+.email-submit-box.active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    opacity: 1;
 }
 
 .mail-icon {

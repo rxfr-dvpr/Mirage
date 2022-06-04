@@ -28,21 +28,20 @@ headerNavHamburger.addEventListener('click', function () {
 
 // all img animation start
 
-let allAnimImg = [...document.querySelectorAll('.all__img')]
+if (window.innerWidth > 1024) {
+    let allAnimImg = [...document.querySelectorAll('.all__img')]
 
-window.addEventListener('mousemove', function moveImg(e) {
-    if (window.innerWidth > 1440) {
+    window.addEventListener('mousemove', function moveImg(e) {
         for (let i = 0; i < allAnimImg.length; i++) {
             let speed = allAnimImg[i].getAttribute('data-speed')
-            
+                
             const X = (window.innerWidth - e.pageX * speed) / 100;
             const Y = (window.innerWidth - e.pageY * speed) / 100;
-            
+                
             allAnimImg[i].style.transform = `translate(${X}px, ${Y}px)`
         }
-    }
-})
-
+    })
+}
 
 // all img animation end
 
@@ -74,17 +73,24 @@ runStringAnim()
 
 // services card animation start
 
-let servicesCardBox = document.querySelector('.services__card-box')
-
-window.addEventListener('scroll', function serviceRunAnim() {
-    if (window.scrollY >= (servicesCardBox.offsetTop - servicesCardBox.offsetHeight) / 3) {
-        servicesCardBox.style.transform = `translateX(0)`
-        servicesCardBox.style.opacity = 1
-    } else {
-        servicesCardBox.style.transform = `translateX(150%)`
-        servicesCardBox.style.opacity = 0
+if (window.innerWidth > 1024) {
+    const servicesCardBox = document.querySelector('.services__card-box')
+    const serviceSection = document.querySelector('.services__section')
+    
+    function serviceAnim(entries) {
+        if (entries[0].isIntersecting) {
+            servicesCardBox.classList.add('active')
+        } else {
+            servicesCardBox.classList.remove('active')
+        }
     }
-})
+    
+    let serviceObserved = new IntersectionObserver(serviceAnim, {threshold: 0.4})
+    
+    serviceObserved.observe(serviceSection)
+}
+
+
 
 // services card animation end
 
@@ -92,23 +98,26 @@ window.addEventListener('scroll', function serviceRunAnim() {
 
 // design section animation start
 
-let designSectionRow = document.querySelector('.design__section .row'),
+if (window.innerWidth > 1024) {
+    const designSection = document.querySelector('.design__section'),
     designImgBox = document.querySelector('.design__img-box'),
     designDesc = document.querySelector('.design__desc')
 
-window.addEventListener('scroll', function () {
-    if (window.scrollY >= (designSectionRow.offsetTop - designSectionRow.offsetHeight) / 1.3) {
-        designImgBox.style.transform = 'translateX(0)'
-        designImgBox.style.opacity = 1
-        designDesc.style.transform = 'translateX(0)'
-        designDesc.style.opacity = 1
-    } else {
-        designImgBox.style.transform = 'translateX(-150%)'
-        designImgBox.style.opacity = 0
-        designDesc.style.transform = 'translateX(150%)'
-        designDesc.style.opacity = 0
+    function desingAnim(entries) {
+        if (entries[0].isIntersecting) {
+            designImgBox.classList.add('active')
+            designDesc.classList.add('active')
+        } else {
+            designImgBox.classList.remove('active')
+            designDesc.classList.remove('active')
+        }
     }
-})
+
+    let designObserved = new IntersectionObserver(desingAnim, {threshold: 0.5})
+    designObserved.observe(designSection)
+}
+
+
 
 // design section animation end
 
@@ -116,24 +125,27 @@ window.addEventListener('scroll', function () {
 
 // teamwork section animation start
 
-let teamworkSection = document.querySelector('.teamwork__section'),
+if (window.innerWidth > 1024) {
+    const teamworkSection = document.querySelector('.teamwork__section'),
     teamworkImgBox = document.querySelector('.teamwork__img-box'),
     teamworkDesc = document.querySelector('.teamwork__desc')
 
-
-window.addEventListener('scroll', function () {
-    if (window.scrollY >= (teamworkSection.offsetTop - teamworkSection.offsetHeight) * 1.3) {
-        teamworkImgBox.style.transform = 'translate(0, 0)'
-        teamworkImgBox.style.opacity = 1
-        teamworkDesc.style.transform = 'translate(0, 0)'
-        teamworkDesc.style.opacity = 1
-    } else {
-        teamworkImgBox.style.transform = 'translate(150%, 90%)'
-        teamworkImgBox.style.opacity = 0
-        teamworkDesc.style.transform = 'translate(-150%, 90%)'
-        teamworkDesc.style.opacity = 0
+    function teamworkAnim(entries) {
+        if (entries[0].isIntersecting) {
+            teamworkImgBox.classList.add('active')
+            teamworkDesc.classList.add('active')
+        } else {
+            teamworkImgBox.classList.remove('active')
+            teamworkDesc.classList.remove('active')
+        }
     }
-})
+
+    let teamworkObserved = new IntersectionObserver(teamworkAnim, {threshold: 0.5})
+    teamworkObserved.observe(teamworkSection)
+}
+
+
+
 
 // teamwork section animation end
 
@@ -142,26 +154,31 @@ window.addEventListener('scroll', function () {
 
 // testimonials section animation start
 
-let testiSection = document.querySelector('.testimonials__section'),
+if (window.innerWidth > 1024) {
+    
+    const testiSection = document.querySelector('.testimonials__section'),
     testiImgBox = document.querySelector('.testimonials__img-box'),
     testiCarousel = document.querySelector('.testimonials__carousel'),
     testiCarouselBtns = document.querySelector('.testimonials__carousel-btns')
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY >= (testiSection.offsetTop - testiSection.offsetHeight)) {
-        testiImgBox.style.transform = "rotate(0) translateY(0)"
-        testiImgBox.style.opacity = 1
-        testiCarousel.style.transform = "rotate(0) translateY(0)"
-        testiCarousel.style.opacity = 1
-        testiCarouselBtns.style.opacity = 1
-    } else {
-        testiImgBox.style.transform = "rotate(-90deg) translateY(-180%)"
-        testiImgBox.style.opacity = 0
-        testiCarousel.style.transform = "rotate(90deg) translateY(-180%)"
-        testiCarousel.style.opacity = 0
-        testiCarouselBtns.style.opacity = 0
+    function testiAnim(entries) {
+        if (entries[0].isIntersecting) {
+            testiImgBox.classList.add('active')
+            testiCarousel.classList.add('active')
+            testiCarouselBtns.classList.add('active')
+        } else {
+            testiImgBox.classList.remove('active')
+            testiCarousel.classList.remove('active')
+            testiCarouselBtns.classList.remove('active')
+        }
     }
-})
+
+    let testiObserved = new IntersectionObserver(testiAnim, {threshold: 0.5})
+    testiObserved.observe(testiSection)
+
+}
+
+
 
 
 // testimonials section animation end
@@ -170,49 +187,26 @@ window.addEventListener('scroll', () => {
 
 // partners section animation start
 
-let ferrarImg = document.querySelector('.ferrari-img'),
-    microsoftImg = document.querySelector('.microsoft-img'),
-    nationalImg = document.querySelector('.national-img'),
-    deloitteImg = document.querySelector('.deloitte-img'),
-    googleImg = document.querySelector('.google-img'),
-    partnerSection = document.querySelector('.partners__section'),
-    partnersImg = document.querySelector('.partners__img')
+if (window.innerWidth > 1024) {
     
-
-window.addEventListener('scroll', () => {
-    if (window.innerWidth > 1024) {
-        if (window.scrollY >= (partnerSection.offsetTop - partnerSection.offsetHeight) / 1.1) {
-            ferrarImg.style.transform = "translate(0, 0)"
-            microsoftImg.style.transform = "translate(0, 0)"
-            nationalImg.style.transform = "translate(0, 0)"
-            deloitteImg.style.transform = "translate(0, 0)"
-            googleImg.style.transform = "translate(0, 0)"
-            ferrarImg.style.opacity = 1
-            microsoftImg.style.opacity = 1
-            nationalImg.style.opacity = 1
-            deloitteImg.style.opacity = 1
-            googleImg.style.opacity = 1
-            
-        } else {
-            ferrarImg.style.transform = "translate(-250%, 250%)"
-            microsoftImg.style.transform = "translate(-300%, -500%)"
-            nationalImg.style.transform = "translateY(450%)"
-            deloitteImg.style.transform = "translate(350%, -520%)"
-            googleImg.style.transform = "translate(280%, 280%)"
-            ferrarImg.style.opacity = 0
-            microsoftImg.style.opacity = 0
-            nationalImg.style.opacity = 0
-            deloitteImg.style.opacity = 0
-            googleImg.style.opacity = 0
-        }
-    } else {
-        ferrarImg.style.opacity = 1
-        microsoftImg.style.opacity = 1
-        nationalImg.style.opacity = 1
-        deloitteImg.style.opacity = 1
-        googleImg.style.opacity = 1
+    const partnersSection = document.querySelector('.partners__section'),
+          partnersImg = document.querySelectorAll('.partners__img')
+    
+    function partnerAnim(entries) {
+        partnersImg.forEach(el => {
+            if (entries[0].isIntersecting) {
+                el.classList.add('active')
+            } else {
+                el.classList.remove('active')
+            }
+        });
+        
     }
-})
+    
+    let partnerObserved = new IntersectionObserver(partnerAnim, {threshold: 1.0})
+    partnerObserved.observe(partnersSection)
+    
+}
 
 // partners section animation end
 
@@ -220,17 +214,24 @@ window.addEventListener('scroll', () => {
 
 // subscribe section animation start
 
-let emailSubmitBox = document.querySelector('.email-submit-box'),
-    subscribeSection = document.querySelector('.subscribe__section')
+if (window.innerWidth > 1024) {
+    
+    const emailSubmitBox = document.querySelector('.email-submit-box'),
+    subscribeSection = document.querySelector('.subscribe__section');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY >= (subscribeSection.offsetTop - subscribeSection.offsetHeight) / 1.1) {
-        emailSubmitBox.style.transform = 'translateX(0)'
-        emailSubmitBox.style.opacity = 1
-    } else {
-        emailSubmitBox.style.transform = 'translateX(-200%)'
-        emailSubmitBox.style.opacity = 0
+    function subscribeAnim(entries) {
+        if (entries[0].isIntersecting) {
+            emailSubmitBox.classList.add('active')
+        } else {
+            emailSubmitBox.classList.remove('active')
+        }
     }
-})
+
+    let subsObserved = new IntersectionObserver(subscribeAnim)
+    subsObserved.observe(subscribeSection)
+
+}
+
+
 
 // subscribe section animation end

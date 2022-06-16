@@ -73,9 +73,11 @@ runStringAnim()
 
 // services card animation start
 
+const servicesCardBox = document.querySelector('.services__card-box'),
+    serviceSection = document.querySelector('.services__section')
+
 if (window.innerWidth > 1024) {
-    const servicesCardBox = document.querySelector('.services__card-box')
-    const serviceSection = document.querySelector('.services__section')
+    
     
     function serviceAnim(entries) {
         if (entries[0].isIntersecting) {
@@ -88,9 +90,9 @@ if (window.innerWidth > 1024) {
     let serviceObserved = new IntersectionObserver(serviceAnim, {threshold: 0.4})
     
     serviceObserved.observe(serviceSection)
+} else {
+    servicesCardBox.classList.add('active')
 }
-
-
 
 // services card animation end
 
@@ -98,11 +100,11 @@ if (window.innerWidth > 1024) {
 
 // design section animation start
 
-if (window.innerWidth > 1024) {
-    const designSection = document.querySelector('.design__section'),
+const designSection = document.querySelector('.design__section'),
     designImgBox = document.querySelector('.design__img-box'),
     designDesc = document.querySelector('.design__desc')
 
+if (window.innerWidth > 1024) {
     function desingAnim(entries) {
         if (entries[0].isIntersecting) {
             designImgBox.classList.add('active')
@@ -115,9 +117,10 @@ if (window.innerWidth > 1024) {
 
     let designObserved = new IntersectionObserver(desingAnim, {threshold: 0.5})
     designObserved.observe(designSection)
+} else {
+    designImgBox.classList.add('active')
+    designDesc.classList.add('active')
 }
-
-
 
 // design section animation end
 
@@ -125,11 +128,11 @@ if (window.innerWidth > 1024) {
 
 // teamwork section animation start
 
-if (window.innerWidth > 1024) {
-    const teamworkSection = document.querySelector('.teamwork__section'),
+const teamworkSection = document.querySelector('.teamwork__section'),
     teamworkImgBox = document.querySelector('.teamwork__img-box'),
     teamworkDesc = document.querySelector('.teamwork__desc')
 
+if (window.innerWidth > 1024) {
     function teamworkAnim(entries) {
         if (entries[0].isIntersecting) {
             teamworkImgBox.classList.add('active')
@@ -142,10 +145,11 @@ if (window.innerWidth > 1024) {
 
     let teamworkObserved = new IntersectionObserver(teamworkAnim, {threshold: 0.5})
     teamworkObserved.observe(teamworkSection)
+
+} else {
+    teamworkImgBox.classList.add('active')
+    teamworkDesc.classList.add('active')
 }
-
-
-
 
 // teamwork section animation end
 
@@ -154,13 +158,12 @@ if (window.innerWidth > 1024) {
 
 // testimonials section animation start
 
-if (window.innerWidth > 1024) {
-    
-    const testiSection = document.querySelector('.testimonials__section'),
+const testiSection = document.querySelector('.testimonials__section'),
     testiImgBox = document.querySelector('.testimonials__img-box'),
     testiCarousel = document.querySelector('.testimonials__carousel'),
     testiCarouselBtns = document.querySelector('.testimonials__carousel-btns')
 
+if (window.innerWidth > 1024) {
     function testiAnim(entries) {
         if (entries[0].isIntersecting) {
             testiImgBox.classList.add('active')
@@ -176,10 +179,11 @@ if (window.innerWidth > 1024) {
     let testiObserved = new IntersectionObserver(testiAnim, {threshold: 0.5})
     testiObserved.observe(testiSection)
 
+} else {
+    testiImgBox.classList.add('active')
+    testiCarousel.classList.add('active')
+    testiCarouselBtns.classList.add('active')
 }
-
-
-
 
 // testimonials section animation end
 
@@ -187,10 +191,10 @@ if (window.innerWidth > 1024) {
 
 // partners section animation start
 
-if (window.innerWidth > 1024) {
-    
-    const partnersSection = document.querySelector('.partners__section'),
+const partnersSection = document.querySelector('.partners__section'),
           partnersImg = document.querySelectorAll('.partners__img')
+
+if (window.innerWidth > 1024) {
     
     function partnerAnim(entries) {
         partnersImg.forEach(el => {
@@ -206,6 +210,10 @@ if (window.innerWidth > 1024) {
     let partnerObserved = new IntersectionObserver(partnerAnim, {threshold: 1.0})
     partnerObserved.observe(partnersSection)
     
+} else {
+    partnersImg.forEach(el => {
+        el.classList.add('active')
+    });
 }
 
 // partners section animation end
@@ -214,10 +222,10 @@ if (window.innerWidth > 1024) {
 
 // subscribe section animation start
 
-if (window.innerWidth > 1024) {
-    
-    const emailSubmitBox = document.querySelector('.email-submit-box'),
+const emailSubmitBox = document.querySelector('.email-submit-box'),
     subscribeSection = document.querySelector('.subscribe__section');
+
+if (window.innerWidth > 1024) {
 
     function subscribeAnim(entries) {
         if (entries[0].isIntersecting) {
@@ -230,8 +238,8 @@ if (window.innerWidth > 1024) {
     let subsObserved = new IntersectionObserver(subscribeAnim)
     subsObserved.observe(subscribeSection)
 
+} else {
+    emailSubmitBox.classList.add('active')
 }
-
-
 
 // subscribe section animation end
